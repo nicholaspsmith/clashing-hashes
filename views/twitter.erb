@@ -1,0 +1,37 @@
+<% @string1 = "#" + params[:text1] %>
+<% @string2 = "#" + params[:text2] %>
+<br/>
+<%= @string1 %> vs 
+<%= @string2 %>
+<br />
+<% 
+def more_popular 
+  # TODO
+  @string1 
+end 
+
+def less_popular
+  # TODO
+  @string2
+end
+%>
+
+
+<br />
+<h3>
+  <%=more_popular%> is qwesome <i class="icon-thumbs-up icon-2x"></i>
+</h3>
+<i class="icon-thumbs-down"></i>
+<%= less_popular %> sucks
+
+<form action="/">
+  <br />
+	<button type="submit">
+    <i class="icon-twitter"></i>
+    Back
+  </button>
+</form>
+
+<% @tweets_list.each do |x| %>
+<%   %>
+<% end%>

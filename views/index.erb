@@ -1,0 +1,18 @@
+<!-- 
+We want to create a webapp that takes two hashtags, searches the Twitter API to find all of the posts about each of the hashtags, figure out which one had more posts and display the winner along with other stats onto the webpage.
+-->
+<% if @show_description %>
+<p>Which tag is more popular</p><p>...and which one sucks?</p>
+<% end %>
+
+<h2>#Twitter hashes!</h2>
+<form action="/twitter" method="post">
+	#<input type="text" id="text1" name="text1">
+	#<input type="text" id="text2" name="text2">
+	<br />
+	<br />
+	<button type="submit" name="submit" class=".submit">
+		<i class="icon-twitter"></i>
+		Battle!
+	</button>
+</form>

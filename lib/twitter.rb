@@ -13,5 +13,9 @@ module Twitter
         # }
       # ]
     end
+
+    def more_popular(hash1,hash2)
+      hash1 + hash2
+    end
   end
 end

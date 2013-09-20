@@ -13,10 +13,10 @@ module FollowerClash
 
     def followers
       client = Twitter::Client.new.configure do |config|
-        config.consumer_key       = ENV['CONSUMER_KEY']
-        config.consumer_secret    = ENV['CONSUMER_SECRET']
-        config.oauth_token        = ENV['OAUTH_TOKEN']
-        config.oauth_token_secret = ENV['OAUTH_TOKEN_SECRET']
+        config.consumer_key        = ENV['CONSUMER_KEY']
+        config.consumer_secret     = ENV['CONSUMER_SECRET']
+        config.oauth_token         = ENV['OAUTH_TOKEN']
+        config.oauth_token_secret  = ENV['OAUTH_TOKEN_SECRET']
       end
 
       client.user(@login).followers_count
@@ -31,12 +31,13 @@ module FollowerClash
 
     def compare
       if @user1.followers > @user2.followers
-        @user1
+        @result = @user1
       elsif @user2.followers > @user1.followers
-        @user2
+        @result = @user2
       else
-        'tie'
+        @result = 'tie'
       end
+      @result
     end
   end
 end
